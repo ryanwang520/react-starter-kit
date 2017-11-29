@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import printMe from './print'
+import {cube} from './math.js'
 
 
 const App = () => <div>
   hello react
   <button onClick={printMe}>Click me</button>
+  <div>{cube(5)}</div>
   </div>;
 
 ReactDOM.render(<App />, document.getElementById('root'));
