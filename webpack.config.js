@@ -4,13 +4,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: {
-    //index: ['babel-polyfill', './src/index.js'],
-    app: './src/index.js',
-    print: './src/print.js'
+    index: ['babel-polyfill', './src/index.js'],
+    another: './src/another-module.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    //filename: 'bundle.js',
     filename: '[name].bundle.js',
   },
   devtool: 'source-map',
