@@ -6,11 +6,11 @@ const webpack = require('webpack')
 module.exports = {
   entry: {
     index: ['babel-polyfill', './src/index.js'],
-    another: './src/another-module.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
   },
   devtool: 'source-map',
   module: {
@@ -32,9 +32,6 @@ module.exports = {
       template: 'assets/index.html',
 
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'common'
-    })
   ]
 
 }
