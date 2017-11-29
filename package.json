@@ -16,7 +16,7 @@
     "webpack-merge": "^4.1.1"
   },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack -p --config webpack.prod.js",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "server": "node server.js"
