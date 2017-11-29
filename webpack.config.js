@@ -14,6 +14,9 @@ module.exports = {
     filename: '[name].bundle.js',
   },
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+  },
   module: {
     rules: [
       {

@@ -4,6 +4,6 @@ import printMe from './print.js'
 
 
 export default () => <div>
-  react hello
+  hello react
   <button onClick={printMe}>Click me</button>
   </div>;
