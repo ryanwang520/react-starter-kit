@@ -12,7 +12,8 @@
     "webpack": "^3.8.1"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",

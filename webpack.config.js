@@ -13,7 +13,7 @@ module.exports = {
     //filename: 'bundle.js',
     filename: '[name].bundle.js',
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
