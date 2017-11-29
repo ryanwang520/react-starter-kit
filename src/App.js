@@ -1,8 +1,5 @@
 
 import React from 'react'
-import printMe from './print.js'
-
-
 export default class App extends React.Component {
   constructor() {
     super()
@@ -12,6 +9,10 @@ export default class App extends React.Component {
   onClick() {
     import('lodash').then(_ => {
       this.setState({name:_.join(['hello', 'webpack code split'])})
+    })
+
+    import('./print').then(_ => {
+      _.default()
     })
 
   }
