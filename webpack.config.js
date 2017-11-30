@@ -1,6 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const webpack =  require('webpack')
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
 
 module.exports = {
   entry: {
@@ -10,8 +13,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    //filename: 'bundle.js',
     filename: '[name].bundle.js',
+    publicPath: ASSET_PATH,
   },
   devtool: 'source-map',
   module: {
@@ -31,7 +34,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: 'assets/index.html',
-
+    }),
+    new webpack.DefinePlugin({
+      'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH)
     })
   ]
 
