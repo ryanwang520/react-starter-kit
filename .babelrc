@@ -1,4 +1,22 @@
 {
-  "presets": ["env", "react"]
-  }
-
+  "presets": ["env", "react"],
+  "plugins": [
+    "transform-object-rest-spread",
+    [
+      "transform-regenerator",
+      {
+        "async": false
+      }
+    ],
+    "syntax-dynamic-import",
+    "transform-class-properties",
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
+  ]
+}
