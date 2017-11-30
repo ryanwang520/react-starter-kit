@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -18,7 +19,13 @@ module.exports = {
 
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      //_: 'lodash'
+      join: ['lodash', 'join']
+    })
+  ]
 
 }
 
