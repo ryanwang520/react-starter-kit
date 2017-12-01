@@ -16,8 +16,8 @@ module.exports = {
       template: 'assets/index.html',
     }),
     new AddAssetHtmlPlugin({
-      filepath: path.resolve(__dirname, './dll/*.dll.js'),
-      // includeSourcemap: false,
+      filepath: path.resolve(__dirname, './dll/vendor*.js'),
+      includeSourcemap: false,
       hash: true,
     }),
   ],

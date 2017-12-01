@@ -26,10 +26,10 @@
   },
   "scripts": {
     "build": "webpack -p --config webpack.prod.js",
-    "watch": "webpack --watch",
-    "start": "nodemon --watch webpack.dev.js --exec \"webpack-dev-server --config webpack.dev.js\"",
-    "server": "node server.js",
-    "dll": "webpack --config webpack.dll.js"
+    "start":
+      "nodemon --watch webpack.dev.js --exec \"webpack-dev-server --config webpack.dev.js\"",
+    "dll": "webpack -p --config webpack.dll.js",
+    "all": "yarn dll && yarn build"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
