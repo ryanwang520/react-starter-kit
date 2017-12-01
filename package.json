@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
+    "add-asset-html-webpack-plugin": "^2.1.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
@@ -27,7 +28,8 @@
     "build": "webpack -p --config webpack.prod.js",
     "watch": "webpack --watch",
     "start": "nodemon --watch webpack.dev.js --exec \"webpack-dev-server --config webpack.dev.js\"",
-    "server": "node server.js"
+    "server": "node server.js",
+    "dll": "webpack --config webpack.dll.js"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
