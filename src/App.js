@@ -40,7 +40,7 @@ export default class App extends React.Component {
       console.log('err')
     } finally {
       console.log('end')
-      // console.log({ ...this.state })
+      console.log({ ...this.state })
     }
   }
   onClick = () => {

@@ -12,3 +12,9 @@
 1. polyfill
 1. decorator, async/await, class properties supported.
 1. more
+
+### setup
+
+1. `yarn install`
+1. build dll with `yarn dll`
+1. start dev-server by `yarn start`
