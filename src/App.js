@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 
 function connect(Comp) {
   console.log('connect')
@@ -20,6 +21,9 @@ export default class App extends React.Component {
     console.log(this)
   }
   async onClick1() {
+    import('./print').then(_ => {
+      _.default()
+    })
     console.log(this)
     if (this.state.name == 'hello') {
       this.setState({ name: 'moon' })
@@ -45,7 +49,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        hello react
+        <div className="hello">hello react😀</div>
         <button onClick={() => this.onClick1()}>{this.state.name}</button>
       </div>
     )
