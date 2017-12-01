@@ -1,15 +1,27 @@
 {
-  "presets": ["env", "react"],
-  "plugins": [
-    "transform-object-rest-spread",
+  "presets": [
     [
-      "transform-regenerator",
+      "env",
       {
-        "async": false
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    [
+      "babel-plugin-transform-object-rest-spread",
+      {
+        "useBuiltIns": true
       }
     ],
-    "syntax-dynamic-import",
-    "transform-class-properties",
+    [
+      "babel-plugin-transform-react-jsx",
+      {
+        "useBuiltIns": true
+      }
+    ],
     [
       "transform-runtime",
       {
@@ -17,6 +29,15 @@
         "polyfill": false,
         "regenerator": true
       }
-    ]
+    ],
+    [
+      "transform-regenerator",
+      {
+        "async": false
+      }
+    ],
+    "react-hot-loader/babel",
+
+    "syntax-dynamic-import"
   ]
 }

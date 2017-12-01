@@ -1,17 +1,24 @@
+// main.js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import printMe from './print'
-import { cube } from './math.js'
+import { AppContainer } from 'react-hot-loader'
 import App from './App'
-if (process.env.NODE_ENV !== 'production') {
-  console.log('Looks like we are in development mode!')
+
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById('root')
+  )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+render(App)
 
+// Webpack Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./print.js', function() {
-    console.log('Accepting the updated printMe module!')
-    printMe()
+  module.hot.accept('./App', () => {
+    console.log('render')
+    render(App)
   })
 }
