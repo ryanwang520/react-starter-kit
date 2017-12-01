@@ -5,6 +5,12 @@ function connect(Comp) {
   return Comp
 }
 
+function* f() {
+  yield 42
+  yield 32
+}
+console.log(f())
+
 @connect
 export default class App extends React.Component {
   state = {
@@ -13,9 +19,13 @@ export default class App extends React.Component {
   async componentDidMount() {
     console.log(this)
   }
-  onClick1 = () => async () => {
+  async onClick1() {
     console.log(this)
-    this.setState({ name: 'moon' })
+    if (this.state.name == 'hello') {
+      this.setState({ name: 'moon' })
+    } else {
+      this.setState({ name: 'hello' })
+    }
     const p = new Promise((resolve, reject) => {
       resolve(12)
     })
@@ -36,7 +46,7 @@ export default class App extends React.Component {
     return (
       <div>
         hello react
-        <button onClick={this.onClick1()}>{this.state.name}</button>
+        <button onClick={() => this.onClick1()}>{this.state.name}</button>
       </div>
     )
   }

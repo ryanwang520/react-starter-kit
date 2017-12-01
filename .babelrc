@@ -26,8 +26,7 @@
       "transform-runtime",
       {
         "helpers": false,
-        "polyfill": false,
-        "regenerator": true
+        "polyfill": false
       }
     ],
     [
@@ -36,8 +35,6 @@
         "async": false
       }
     ],
-    "react-hot-loader/babel",
-
     "syntax-dynamic-import"
   ]
 }
