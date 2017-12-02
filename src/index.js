@@ -4,21 +4,9 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import App from './App'
 
-const render = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('root')
-  )
-}
-
-render(App)
-
-// Webpack Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    console.log('render')
-    render(App)
-  })
-}
+ReactDOM.render(
+  <AppContainer>
+    <App />
+  </AppContainer>,
+  document.getElementById('root')
+)

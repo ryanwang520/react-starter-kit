@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 
 module.exports = {
-  entry: ['babel-polyfill', 'react-hot-loader/patch', './src/index.js'],
+  entry: ['babel-polyfill', './src/index.js'],
   dependencies: ['vendor'],
   plugins: [
     new webpack.DllReferencePlugin({

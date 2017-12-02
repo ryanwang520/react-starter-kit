@@ -5,7 +5,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
   name: 'vendor',
   entry: {
-    vendor: ['react', 'react-dom', 'babel-polyfill', 'react-hot-loader'],
+    vendor: ['react', 'react-dom', 'babel-polyfill'],
   },
   output: {
     path: path.resolve(__dirname, 'dll'),
