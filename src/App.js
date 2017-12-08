@@ -30,7 +30,7 @@ export default class App extends React.Component {
     } else {
       this.setState({ name: 'hello' })
     }
-    const p = new Promise((resolve, reject) => {
+    const p = new Promise(resolve => {
       resolve(12)
     })
     try {

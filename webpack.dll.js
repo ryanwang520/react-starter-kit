@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
   name: 'vendor',
   entry: {
