@@ -13,7 +13,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Production',
-      template: 'assets/index.html',
+      template: 'public/index.html',
     }),
     new AddAssetHtmlPlugin({
       filepath: path.resolve(__dirname, './dll/vendor*.js'),
