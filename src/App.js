@@ -31,7 +31,7 @@ export default class App extends React.Component {
       this.setState({ name: 'hello' })
     }
     const p = new Promise((resolve, reject) => {
-      resolve(12
+      resolve(12)
     })
     try {
       const res = await p
