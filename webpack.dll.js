@@ -8,9 +8,10 @@ module.exports = {
   entry: {
     vendor: Object.keys(pkg.dependencies),
   },
+  devtool: 'sourcemap',
   output: {
     path: path.resolve(__dirname, 'dll'),
-    filename: '[name]_[hash].js',
+    filename: '[name].[hash:8].js',
     library: '[name]_[hash]',
   },
   plugins: [

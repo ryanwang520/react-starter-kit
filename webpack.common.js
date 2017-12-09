@@ -16,15 +16,15 @@ module.exports = {
       template: 'public/index.html',
     }),
     new AddAssetHtmlPlugin({
-      filepath: path.resolve(__dirname, './dll/vendor*.js'),
-      includeSourcemap: false,
+      filepath: path.resolve(__dirname, './dll/vendor**.js'),
+      includeSourcemap: true,
       hash: true,
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.[hash:8].js',
+    chunkFilename: '[name].[hash:8].chunk.js',
+    path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
