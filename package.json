@@ -32,7 +32,7 @@
   "scripts": {
     "build": "webpack -p --config webpack.prod.js",
     "start":
-      "nodemon --watch webpack.dev.js --exec \"webpack-dev-server --config webpack.dev.js\"",
+      "nodemon --watch webpack.common.js --watch webpack.dev.js --exec \"webpack-dev-server --config webpack.dev.js\"",
     "dll": "webpack -p --config webpack.dll.js",
     "dll:dev": "webpack --config webpack.dll.js",
     "all": "yarn dll && yarn build",
