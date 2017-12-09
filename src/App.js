@@ -21,7 +21,7 @@ export default class App extends React.Component {
     console.log(this)
   }
   async onClick1() {
-    import('./print').then(_ => {
+    import(/* webpackChunkName: "printMod" */ './print').then(_ => {
       _.default()
     })
     console.log(this)
