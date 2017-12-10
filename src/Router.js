@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Loadable from 'react-loadable'
+import Header from './Containers/Header'
 
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
@@ -29,9 +30,11 @@ const Trend = AsyncLoading(() =>
 export default () => (
   <BrowserRouter>
     <Fragment>
-      <StyledLink to="/">home</StyledLink>
-      <StyledLink to="/about">about</StyledLink>
-      <StyledLink to="/trend">trend</StyledLink>
+      <Header>
+        <StyledLink to="/">home</StyledLink>
+        <StyledLink to="/about">about</StyledLink>
+        <StyledLink to="/trend">trend</StyledLink>
+      </Header>
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
       <Route path="/trend" component={Trend} />

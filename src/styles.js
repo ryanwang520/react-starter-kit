@@ -7,4 +7,9 @@ const Div = styled.div`
       .join('\n')};
 `
 
-export { Div }
+const theme = {
+  // background: '#78CA95',
+  background: '#F6F8FC',
+}
+
+export { Div, theme }

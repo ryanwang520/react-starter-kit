@@ -12,6 +12,7 @@
   "rules": {
     "no-console": "off",
     "react/display-name": 0,
+    "react/prop-types": 0,
     "strict": 0,
     "curly": "warn"
   },
