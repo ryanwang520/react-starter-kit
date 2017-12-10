@@ -10,8 +10,8 @@
 1. code splitting
 1. dll
 1. polyfill
-1. decorator, async/await, class properties supported.
-1. more
+1. decorator(not recomment), async/await, class properties supported.
+1. integrate with *react-router* and 💅styled-components💅 
 
 ### setup
 
