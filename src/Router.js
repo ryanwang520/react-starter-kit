@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import Loadable from 'react-loadable'
 import Header from './Containers/Header'
+import importedComponent from 'react-imported-component'
 
 import {
   BrowserRouter,
@@ -20,10 +21,12 @@ const StyledLink = styled(Link)`
 `
 
 const AsyncLoading = (imported, LoadingIndicator = DefaultLoadingIndicator) =>
-  Loadable({
-    loader: imported,
-    loading: LoadingIndicator,
-  })
+  module.hot
+    ? importedComponent(imported)
+    : Loadable({
+        loader: imported,
+        loading: LoadingIndicator,
+      })
 
 const Home = AsyncLoading(() =>
   import(/* webpackChunkName: "Home" */ './Containers/Home')
