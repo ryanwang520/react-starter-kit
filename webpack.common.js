@@ -25,6 +25,7 @@ module.exports = {
     filename: 'main.[hash:8].js',
     chunkFilename: '[name].[hash:8].chunk.js',
     path: path.resolve(__dirname, 'build'),
+    publicPath: '',
   },
   module: {
     rules: [
