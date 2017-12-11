@@ -18,5 +18,4 @@ here is a live [demo](https://xenodochial-yalow-6ae809.netlify.com/)
 ### setup
 
 1. `yarn install`
-1. build dll with `yarn dll`
 1. start dev-server by `yarn start`

@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     vendor: Object.keys(pkg.dependencies),
   },
-  devtool: 'sourcemap',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dll'),
     filename: '[name].[hash:8].js',
