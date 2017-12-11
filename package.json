@@ -31,7 +31,9 @@
   },
   "scripts": {
     "build": "yarn dll && webpack -p --config webpack.prod.js",
-    "start": "yarn dll:dev && nodemon --watch webpack.common.js --watch webpack.dev.js --exec \"webpack-dev-server --config webpack.dev.js\"",
+    "start":
+      "nodemon --watch webpack.common.js --watch webpack.dev.js --exec \"webpack-dev-server --config webpack.dev.js\"",
+    "dev": "yarn dll:dev && yarn start",
     "dll": "webpack -p --config webpack.dll.js",
     "dll:dev": "webpack --config webpack.dll.js",
     "format": "prettier-eslint --write \"src/**/*.js\"",
@@ -39,11 +41,7 @@
     "lint": "eslint ."
   },
   "lint-staged": {
-    "*.js": [
-      "format",
-      "lint",
-      "git add"
-    ]
+    "*.js": ["format", "lint", "git add"]
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
