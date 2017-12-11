@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { Div } from '../styles'
 import { Helmet } from 'react-helmet'

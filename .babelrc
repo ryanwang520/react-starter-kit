@@ -5,7 +5,8 @@
       {
         "modules": false
       }
-    ]
+    ],
+    "flow"
   ],
   "plugins": [
     "transform-decorators-legacy",

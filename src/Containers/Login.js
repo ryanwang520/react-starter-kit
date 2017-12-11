@@ -1,10 +1,21 @@
+// @flow
 import React from 'react'
 import auth from '../auth'
 import { Redirect } from 'react-router-dom'
 
-export default class Login extends React.Component {
-  constructor(props) {
-    super(props)
+export default class Login extends React.Component<
+  {
+    location: {
+      state: {
+        from: {},
+      },
+    },
+  },
+  { redirectToRefer: boolean }
+> {
+  login: Function
+  constructor() {
+    super()
     this.login = this.login.bind(this)
     this.state = { redirectToRefer: false }
   }

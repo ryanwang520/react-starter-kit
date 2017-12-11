@@ -1,3 +1,4 @@
+// @flow
 import styled from 'styled-components'
 
 // use this if you prefer to not naming some style.

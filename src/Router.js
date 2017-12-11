@@ -1,3 +1,4 @@
+// @flow
 import React, { Fragment } from 'react'
 import Loadable from 'react-loadable'
 import Header from './Containers/Header'
