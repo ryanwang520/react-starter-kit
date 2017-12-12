@@ -22,3 +22,5 @@ if (module.hot) {
     render(App)
   })
 }
+
+require('offline-plugin/runtime').install()
