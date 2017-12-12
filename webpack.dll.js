@@ -6,9 +6,7 @@ const pkg = require(path.join(process.cwd(), 'package.json'))
 module.exports = {
   name: 'vendor',
   entry: {
-    vendor: Object.keys(pkg.dependencies).filter(
-      key => key !== 'react-imported-component'
-    ),
+    vendor: Object.keys(pkg.dllDependencies),
   },
   devtool: 'source-map',
   output: {

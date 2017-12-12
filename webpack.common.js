@@ -1,24 +1,12 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
-const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 
 module.exports = {
   entry: ['babel-polyfill', 'react-hot-loader/patch', './src/index.js'],
-  dependencies: ['vendor'],
   plugins: [
-    new webpack.DllReferencePlugin({
-      context: __dirname,
-      manifest: path.resolve(__dirname, 'dll/manifest.json'),
-    }),
     new HtmlWebpackPlugin({
       title: 'Production',
       template: 'public/index.html',
-    }),
-    new AddAssetHtmlPlugin({
-      filepath: path.resolve(__dirname, './dll/vendor**.js'),
-      includeSourcemap: true,
-      hash: true,
     }),
   ],
   output: {
