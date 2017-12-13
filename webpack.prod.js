@@ -10,6 +10,7 @@ const OfflinePlugin = require('offline-plugin')
 
 module.exports = merge(common, {
   dependencies: ['vendor'],
+  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(['build']),
     new webpack.DllReferencePlugin({
