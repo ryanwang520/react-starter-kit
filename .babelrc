@@ -1,41 +1,36 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "modules": false
       }
     ],
-    "flow"
+    "@babel/preset-flow"
   ],
   "plugins": [
-    "transform-decorators-legacy",
-    "transform-class-properties",
+    "@babel/plugin-proposal-decorators",
+    "@babel/plugin-syntax-class-properties",
+    "@babel/plugin-syntax-object-rest-spread",
     [
-      "babel-plugin-transform-object-rest-spread",
+      "@babel/plugin-transform-react-jsx",
       {
         "useBuiltIns": true
       }
     ],
     [
-      "babel-plugin-transform-react-jsx",
-      {
-        "useBuiltIns": true
-      }
-    ],
-    [
-      "transform-runtime",
+      "@babel/plugin-transform-runtime",
       {
         "helpers": false,
         "polyfill": false
       }
     ],
     [
-      "transform-regenerator",
+      "@babel/plugin-transform-regenerator",
       {
         "async": false
       }
     ],
-    "syntax-dynamic-import"
+    "@babel/plugin-syntax-dynamic-import"
   ]
 }
