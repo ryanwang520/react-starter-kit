@@ -209,13 +209,20 @@
     "@babel/helper-remap-async-to-generator" "7.0.0-beta.36"
     "@babel/plugin-syntax-async-generators" "7.0.0-beta.36"
 
+"@babel/plugin-proposal-class-properties@^7.0.0-beta.36":
+  version "7.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.0.0-beta.36.tgz#be236de98ff7ccdf650b7282e8e1f5bda808017d"
+  dependencies:
+    "@babel/helper-function-name" "7.0.0-beta.36"
+    "@babel/plugin-syntax-class-properties" "7.0.0-beta.36"
+
 "@babel/plugin-proposal-decorators@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.0.0-beta.36.tgz#bc803134ad6274535d03d16c6ec53dd2b1621603"
   dependencies:
     "@babel/plugin-syntax-decorators" "7.0.0-beta.36"
 
-"@babel/plugin-proposal-object-rest-spread@7.0.0-beta.36":
+"@babel/plugin-proposal-object-rest-spread@7.0.0-beta.36", "@babel/plugin-proposal-object-rest-spread@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.0.0-beta.36.tgz#9712585326ee8b1c0bd069af6583d3511d4bf66f"
   dependencies:
@@ -238,7 +245,7 @@
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-async-generators/-/plugin-syntax-async-generators-7.0.0-beta.36.tgz#6c5d1d9606e6875fc0548345c2d67c1ea5e029b4"
 
-"@babel/plugin-syntax-class-properties@^7.0.0-beta.36":
+"@babel/plugin-syntax-class-properties@7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.0.0-beta.36.tgz#a0002fa66dbb43e82402b4cc947dac0e07058818"
 
@@ -258,7 +265,7 @@
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.0.0-beta.36.tgz#ed12dafe2cb9d3533050d3935d703ef168143371"
 
-"@babel/plugin-syntax-object-rest-spread@7.0.0-beta.36", "@babel/plugin-syntax-object-rest-spread@^7.0.0-beta.36":
+"@babel/plugin-syntax-object-rest-spread@7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.0.0-beta.36.tgz#b39d32a342dc2cc18cb973b80536e94b44653d1f"
 
@@ -270,7 +277,7 @@
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.0.0-beta.36.tgz#337267be7d8ed032067736ee5e76fe9066c45d4a"
 
-"@babel/plugin-transform-async-to-generator@7.0.0-beta.36":
+"@babel/plugin-transform-async-to-generator@7.0.0-beta.36", "@babel/plugin-transform-async-to-generator@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-async-to-generator/-/plugin-transform-async-to-generator-7.0.0-beta.36.tgz#da4530848f2fb595ad5ca89530814c1416a572ed"
   dependencies:
