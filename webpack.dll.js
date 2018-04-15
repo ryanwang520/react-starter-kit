@@ -6,7 +6,7 @@ const pkg = require(path.join(process.cwd(), 'package.json'))
 module.exports = {
   name: 'vendor',
   entry: {
-    vendor: Object.keys(pkg.dllDependencies),
+    vendor: pkg.dllDependencies,
   },
   devtool: 'source-map',
   output: {

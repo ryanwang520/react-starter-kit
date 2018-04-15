@@ -10,25 +10,6 @@ module.exports = merge(common, {
     historyApiFallback: true,
   },
 
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   output: { publicPath: '/' },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-            plugins: ['react-hot-loader/babel'],
-          },
-        },
-      },
-    ],
-  },
 })

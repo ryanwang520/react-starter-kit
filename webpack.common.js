@@ -10,8 +10,8 @@ module.exports = {
     }),
   ],
   output: {
-    filename: 'main.[hash:8].js',
-    chunkFilename: '[name].[hash:8].chunk.js',
+    filename: '[name].[hash:8].js',
+    chunkFilename: '[name].[chunkhash:8].chunk.js',
     path: path.resolve(__dirname, 'build'),
     publicPath: '',
   },

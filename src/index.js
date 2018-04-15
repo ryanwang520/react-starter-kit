@@ -1,4 +1,3 @@
-// main.js
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
@@ -14,13 +13,3 @@ const render = Component => {
 }
 
 render(App)
-
-// Webpack Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    console.log('render')
-    render(App)
-  })
-}
-
-require('offline-plugin/runtime').install()

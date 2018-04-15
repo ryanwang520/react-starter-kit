@@ -6,8 +6,6 @@ const webpack = require('webpack')
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const OfflinePlugin = require('offline-plugin')
-
 module.exports = merge(common, {
   dependencies: ['vendor'],
   devtool: 'source-map',
@@ -26,7 +24,6 @@ module.exports = merge(common, {
       includeSourcemap: true,
       hash: true,
     }),
-    new OfflinePlugin(),
   ],
   output: {
     publicPath: '',
