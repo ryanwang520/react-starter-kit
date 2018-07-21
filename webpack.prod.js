@@ -26,23 +26,30 @@ module.exports = merge(common, {
   devtool: 'source-map',
   mode: 'production',
   module: {
-    rules: {
-      test: /\.css$/,
-      use: [
-        MiniCssExtractPlugin.loader,
-        {
-          loader: require.resolve('css-loader'),
-          options: {
-            importLoaders: 1,
-            minimize: true,
-            sourceMap: true,
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+              minimize: true,
+              sourceMap: true,
+            },
           },
-        },
-        {
-          loader: require.resolve('postcss-loader'),
-          options: postCSSLoaderOptions,
-        },
-      ],
+          {
+            loader: require.resolve('postcss-loader'),
+            options: postCSSLoaderOptions,
+          },
+        ],
+      },
+    ],
+  },
+  optimization: {
+    runtimeChunk: {
+      name: 'manifest',
     },
   },
   plugins: [

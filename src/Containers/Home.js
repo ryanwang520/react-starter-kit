@@ -9,6 +9,6 @@ export default () => (
       <title>this is home page</title>
       <meta name="description" content="application home page" />
     </Helmet>
-    home is jue le sweet
+    home
   </Div>
 )
