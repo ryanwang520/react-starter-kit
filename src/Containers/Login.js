@@ -13,10 +13,7 @@ export default class Login extends React.Component<
   },
   { redirectToRefer: boolean }
 > {
-  constructor(props) {
-    super(props)
-    this.state = { redirectToRefer: false }
-  }
+  state = { redirectToRefer: false }
   login = async () => {
     try {
       await auth.authenticate()
