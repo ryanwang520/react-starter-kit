@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = merge(common, {
   dependencies: ['vendor'],
   devtool: 'source-map',
+  mode: 'production',
   plugins: [
     new CleanWebpackPlugin(['build']),
     new webpack.DllReferencePlugin({

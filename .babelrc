@@ -9,7 +9,12 @@
     "@babel/preset-flow"
   ],
   "plugins": [
-    "@babel/plugin-proposal-decorators",
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
     "@babel/plugin-transform-async-to-generator",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-object-rest-spread",
