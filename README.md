@@ -7,7 +7,7 @@ here is a live [demo](https://xenodochial-yalow-6ae809.netlify.com/)
 ### features
 
 1.  necessary loaders
-1.  seprate webpack config file for different env
+1.  separate webpack config file for different env
 1.  react hot loader
 1.  code splitting
 1.  dll
