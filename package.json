@@ -43,9 +43,13 @@
     "start": "nodemon --watch webpack.common.js --watch webpack.dev.js --exec \"webpack-dev-server --hot --config webpack.dev.js\"",
     "dll": "webpack -p --config webpack.dll.js",
     "format": "prettier-eslint --write \"src/**/*.js\"",
-    "precommit": "lint-staged",
     "lint": "eslint .",
     "postinstall": "yarn dll"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
