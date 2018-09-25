@@ -13,10 +13,9 @@
     [
       "@babel/plugin-proposal-decorators",
       {
-        "legacy": true
+        "decoratorsBeforeExport": true
       }
     ],
-    "@babel/plugin-transform-async-to-generator",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-object-rest-spread",
     [
@@ -28,13 +27,10 @@
     [
       "@babel/plugin-transform-runtime",
       {
-        "helpers": false
-      }
-    ],
-    [
-      "@babel/plugin-transform-regenerator",
-      {
-        "async": false
+        "helpers": true,
+        "corejs": 2,
+        "regenerator": true,
+        "useESModules": true
       }
     ],
     "@babel/plugin-syntax-dynamic-import",
