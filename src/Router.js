@@ -1,6 +1,6 @@
 // @flow
 import React, { Fragment } from 'react'
-import loadable from 'loadable-components'
+import Loadable from 'react-loadable'
 
 import Header from './Containers/Header'
 
@@ -22,8 +22,9 @@ const StyledLink = styled(Link)`
 `
 
 const AsyncLoading = (imported, LoadingIndicator = DefaultLoadingIndicator) =>
-  loadable(imported, {
-    LoadingComponent: LoadingIndicator,
+  Loadable({
+    loader: imported,
+    loading: LoadingIndicator,
   })
 
 const Home = AsyncLoading(() =>
