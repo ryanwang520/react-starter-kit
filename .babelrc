@@ -5,7 +5,8 @@
       "@babel/preset-env",
       {
         "modules": false,
-        "useBuiltIns": "usage"
+        "useBuiltIns": "usage",
+        "corejs": 2
       }
     ],
     "@babel/preset-flow"
@@ -17,7 +18,6 @@
       "@babel/plugin-transform-runtime",
       {
         "helpers": true,
-        "corejs": 2,
         "regenerator": true,
         "useESModules": true
       }

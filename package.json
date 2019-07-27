@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
@@ -32,7 +32,7 @@
     "postcss-loader": "^3.0.0",
     "prettier-eslint-cli": "^4.7.1",
     "style-loader": "^0.23.0",
-    "webpack": "^4.20.2",
+    "webpack": "^4.38.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
     "webpack-merge": "^4.1.4"
@@ -62,21 +62,25 @@
   },
   "dllDependencies": [
     "react",
-    "react-dom",
     "react-helmet",
     "react-hot-loader",
-    "react-loadable",
+    "@hot-loader/react-dom",
     "react-router-dom",
     "styled-components"
   ],
   "dependencies": {
-    "loadable-components": "^2.2.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-helmet": "^5.2.0",
-    "react-hot-loader": "^4.3.11",
-    "react-loadable": "^5.5.0",
-    "react-router-dom": "^4.3.1",
-    "styled-components": "^3.4.9"
-  }
+    "@hot-loader/react-dom": "^16.8.6",
+    "core-js": "2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-hot-loader": "^4.12.10",
+    "react-router-dom": "^5.0.1",
+    "styled-components": "^4.3.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
