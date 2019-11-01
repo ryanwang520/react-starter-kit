@@ -9,7 +9,6 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
-    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime-corejs2": "^7.1.2",
     "add-asset-html-webpack-plugin": "^3.0.1",
@@ -22,7 +21,6 @@
     "eslint": "^5.6.1",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
-    "flow-bin": "^0.81.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.0.1",
     "inline-manifest-webpack-plugin": "^4.0.2",
@@ -62,21 +60,17 @@
   },
   "dllDependencies": [
     "react",
-    "react-helmet",
     "react-hot-loader",
     "@hot-loader/react-dom",
-    "react-router-dom",
-    "styled-components"
+    "react-router-dom"
   ],
   "dependencies": {
-    "@hot-loader/react-dom": "^16.8.6",
+    "@hot-loader/react-dom": "^16.10.2",
     "core-js": "2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1",
-    "react-hot-loader": "^4.12.10",
-    "react-router-dom": "^5.0.1",
-    "styled-components": "^4.3.2"
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-hot-loader": "^4.12.15",
+    "react-router-dom": "^5.1.2"
   },
   "browserslist": [
     "> 1%",
