@@ -5,7 +5,7 @@ export default () => {
   return (
     <div padding="10px">
       <button onClick={() => setCount(count + 1)}>+</button>
-      home better {count}
+      home world {count}
     </div>
   )
 }
