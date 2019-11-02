@@ -1,7 +1,4 @@
-// @flow
 import React, { lazy, Suspense } from 'react'
-
-import Header from './Containers/Header'
 
 import {
   BrowserRouter,
@@ -11,12 +8,7 @@ import {
   Switch,
   withRouter,
 } from 'react-router-dom'
-import styled from 'styled-components'
 import auth from './auth'
-
-const StyledLink = styled(Link)`
-  padding: 10px;
-`
 
 const Home = lazy(() =>
   import(/* webpackChunkName: "Home" */ './Containers/Home')
@@ -75,11 +67,15 @@ export default () => (
         <Route path="/login" component={Login} />
         <>
           <AuthButton />
-          <Header>
-            <StyledLink to="/">home</StyledLink>
-            <StyledLink to="/about">about</StyledLink>
-            <StyledLink to="/trend">trend</StyledLink>
-          </Header>
+          <header style={{ margin: '5px 0' }}>
+            <Link style={{ margin: '5px' }} to="/">
+              home
+            </Link>
+            <Link style={{ margin: '5px' }} to="/about">
+              about
+            </Link>
+            <Link to="/trend">trend</Link>
+          </header>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <PrivateRoute path="/trend" component={Trend} />

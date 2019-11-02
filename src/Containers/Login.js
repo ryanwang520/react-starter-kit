@@ -1,18 +1,8 @@
-// @flow
 import React from 'react'
 import auth from '../auth'
 import { Redirect } from 'react-router-dom'
 
-export default class Login extends React.Component<
-  {
-    location: {
-      state: {
-        from: {},
-      },
-    },
-  },
-  { redirectToRefer: boolean }
-> {
+export default class Login extends React.Component {
   state = { redirectToRefer: false }
   login = async () => {
     try {
