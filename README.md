@@ -13,7 +13,7 @@ here is a live [demo](https://xenodochial-yalow-6ae809.netlify.com/)
 1.  dll
 1.  polyfill on demand
 1.  async/await, class properties supported.
-1.  integrate with _react-router_ and _styled-components_
+1.  integrate with _react-router_.
 
 ### setup
 
