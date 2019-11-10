@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const pkg = require(path.join(process.cwd(), 'package.json'))
 
 module.exports = {
@@ -15,7 +15,9 @@ module.exports = {
     library: '[name]_[hash]',
   },
   plugins: [
-    new CleanWebpackPlugin(['dll']),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['dll'],
+    }),
     new webpack.DllPlugin({
       name: '[name]_[hash]',
       path: path.resolve(__dirname, 'dll/manifest.json'),
