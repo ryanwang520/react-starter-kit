@@ -1,10 +1,10 @@
-# react starter kit
+# React Starter Kit
 
-### an opinioned boilerplate for react app development
+### An opinioned boilerplate for react app development
 
-here is a live [demo](https://xenodochial-yalow-6ae809.netlify.com/)
+Here is a live [demo](https://xenodochial-yalow-6ae809.netlify.com/)
 
-### features
+### Features
 
 1.  necessary loaders
 1.  separate webpack config file for different env
@@ -15,7 +15,7 @@ here is a live [demo](https://xenodochial-yalow-6ae809.netlify.com/)
 1.  async/await, class properties supported.
 1.  integrate with _react-router_.
 
-### setup
+### Setup
 
 1.  `yarn install`
 1.  start dev-server by `yarn start`
