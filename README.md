@@ -2,7 +2,7 @@
 
 ### An opinioned boilerplate for react app development
 
-Here is a live [demo](https://xenodochial-yalow-6ae809.netlify.com/)
+Here is a live [demo](https://react-starter-kit-demo.netlify.com/)
 
 ### Features
 
