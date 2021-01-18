@@ -4,7 +4,8 @@ const common = require('./webpack.common.js')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
-const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
+
+var InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
@@ -49,7 +50,7 @@ module.exports = merge(common, {
   },
   optimization: {
     runtimeChunk: {
-      name: 'manifest',
+      name: 'runtime',
     },
   },
   plugins: [
@@ -62,7 +63,7 @@ module.exports = merge(common, {
       title: 'Production',
       template: 'public/index.html',
     }),
-    new InlineManifestWebpackPlugin('manifest'),
+    new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime/]),
 
     new AddAssetHtmlPlugin({
       filepath: path.resolve(__dirname, './dll/vendor**.js'),

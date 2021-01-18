@@ -1,8 +1,10 @@
 import React from 'react'
 import Layout from '../Layout'
 
-export default () => (
-  <Layout>
-    <div>about</div>
-  </Layout>
-)
+export default function About() {
+  return (
+    <Layout>
+      <div>about</div>
+    </Layout>
+  )
+}
