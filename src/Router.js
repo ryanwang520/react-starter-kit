@@ -20,7 +20,7 @@ const Login = lazy(() =>
 const PrivateRoute = ({ children, ...rest }) => (
   <Route
     {...rest}
-    render={props =>
+    render={(props) =>
       auth.isAuthenticated ? (
         children
       ) : (
