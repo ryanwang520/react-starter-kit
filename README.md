@@ -8,11 +8,11 @@ Here is a live [demo](https://react-starter-kit-demo.netlify.com/)
 
 1.  Necessary loaders
 1.  Separate webpack config file for different env
-1.  React hot loader
+1.  React Fast Refresh
+1.  TypeScript Support
 1.  Code splitting
 1.  DllPlugin configured
 1.  Polyfill on demand
-1.  _async/await_, _class properties_ supported.
 1.  Integrate with _react-router_.
 
 ## Setup
