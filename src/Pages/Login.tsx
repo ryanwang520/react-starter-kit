@@ -4,7 +4,7 @@ import { useLocation, useHistory } from 'react-router-dom'
 
 export default function Login() {
   let history = useHistory()
-  let location = useLocation()
+  let location = useLocation<{ from: { pathname: string } }>()
   let { from } = location.state || { from: { pathname: '/' } }
 
   const login = async () => {
