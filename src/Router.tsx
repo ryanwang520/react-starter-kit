@@ -38,26 +38,28 @@ const PrivateRoute = ({
   />
 )
 
-export default () => (
-  <BrowserRouter>
-    <Suspense fallback={<div>Loading...</div>}>
-      <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <PrivateRoute path="/private">
-          <Private />
-        </PrivateRoute>
-        <Route path="*">
-          <NotFound />
-        </Route>
-      </Switch>
-    </Suspense>
-  </BrowserRouter>
-)
+export default function Router() {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <PrivateRoute path="/private">
+            <Private />
+          </PrivateRoute>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Suspense>
+    </BrowserRouter>
+  )
+}
