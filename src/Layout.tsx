@@ -8,7 +8,7 @@ const Button = () => {
     <p>
       welcome
       <button
-        onClick={async function() {
+        onClick={async function () {
           await auth.signout()
           history.push('/')
         }}
@@ -36,9 +36,11 @@ const Header = () => {
   )
 }
 
-export default ({ children }) => (
-  <>
-    <Header />
-    {children}
-  </>
-)
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  )
+}

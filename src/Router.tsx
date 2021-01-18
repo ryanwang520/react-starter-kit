@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React, { ComponentProps, lazy, Suspense } from 'react'
 
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 import auth from './auth'
@@ -17,7 +17,10 @@ const Login = lazy(() =>
   import(/* webpackChunkName: "Login" */ './Pages/Login')
 )
 
-const PrivateRoute = ({ children, ...rest }) => (
+const PrivateRoute = ({
+  children,
+  ...rest
+}: { children: React.ReactNode } & ComponentProps<typeof Route>) => (
   <Route
     {...rest}
     render={(props) =>

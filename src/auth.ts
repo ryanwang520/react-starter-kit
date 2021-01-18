@@ -1,5 +1,5 @@
 const auth = {
-  isAuthenticated: localStorage.getItem('token'),
+  isAuthenticated: !!localStorage.getItem('token'),
   async authenticate() {
     this.isAuthenticated = true
     localStorage.setItem('token', 'token')
