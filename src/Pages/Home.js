@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Layout from '../Layout'
 
-export default () => {
+export default function Home() {
   const [count, setCount] = useState(0)
   return (
     <Layout>
@@ -10,8 +10,8 @@ export default () => {
           padding: '10px',
         }}
       >
-        <button onClick={() => setCount(count + 1)}>+</button>
-        home world {count}
+        <button onClick={() => setCount(count + 3)}>+</button>
+        home world bilibili {count}
       </div>
     </Layout>
   )
