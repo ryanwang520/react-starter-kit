@@ -1,6 +1,12 @@
-import React, { ComponentProps, lazy, Suspense } from 'react'
+import React, { lazy, Suspense } from 'react'
 
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  useLocation,
+  Navigate,
+} from 'react-router-dom'
 import auth from './auth'
 
 const Home = lazy(() => import(/* webpackChunkName: "Home" */ './Pages/Home'))
@@ -17,48 +23,38 @@ const Login = lazy(() =>
   import(/* webpackChunkName: "Login" */ './Pages/Login')
 )
 
-const PrivateRoute = ({
-  children,
-  ...rest
-}: { children: React.ReactNode } & ComponentProps<typeof Route>) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      auth.isAuthenticated ? (
-        children
-      ) : (
-        <Redirect
-          to={{
-            pathname: '/login',
-            state: { from: props.location },
-          }}
-        />
-      )
-    }
-  />
-)
+function RequireAuth({ children }: { children: JSX.Element }) {
+  let location = useLocation()
+
+  if (!auth.isAuthenticated) {
+    // Redirect them to the /login page, but save the current location they were
+    // trying to go to when they were redirected. This allows us to send them
+    // along to that page after they login, which is a nicer user experience
+    // than dropping them off on the home page.
+    return <Navigate to="/login" state={{ from: location }} replace />
+  }
+
+  return children
+}
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <PrivateRoute path="/private">
-            <Private />
-          </PrivateRoute>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/private"
+            element={
+              <RequireAuth>
+                <Private />
+              </RequireAuth>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </Suspense>
     </BrowserRouter>
   )
