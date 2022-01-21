@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, Outlet } from 'react-router-dom'
 import auth from './auth'
 
 const Button = () => {
@@ -36,11 +36,11 @@ const Header = () => {
   )
 }
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {
   return (
     <>
       <Header />
-      {children}
+      <Outlet />
     </>
   )
 }

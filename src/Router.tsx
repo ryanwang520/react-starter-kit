@@ -8,6 +8,7 @@ import {
   Navigate,
 } from 'react-router-dom'
 import auth from './auth'
+import Layout from './Layout'
 
 const Home = lazy(() => import(/* webpackChunkName: "Home" */ './Pages/Home'))
 const NotFound = lazy(() =>
@@ -42,17 +43,19 @@ export default function Router() {
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<About />} />
-          <Route
-            path="/private"
-            element={
-              <RequireAuth>
-                <Private />
-              </RequireAuth>
-            }
-          />
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/private"
+              element={
+                <RequireAuth>
+                  <Private />
+                </RequireAuth>
+              }
+            />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
